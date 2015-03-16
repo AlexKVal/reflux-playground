@@ -13,7 +13,7 @@ var Store = Reflux.createStore({
         fname: '{firstName}',
         lname: '{lastName}',
         tel: '{phone|format}',
-        address: 'streetAddress',
+        address: '{streetAddress}',
         city: '{city}',
         state: '{usState|abbr}',
         zip: '{zip}'
