@@ -3,15 +3,25 @@ var Reflux = require('reflux');
 var JSONP = require('browser-jsonp');
 
 var Store = Reflux.createStore({
-  data: {message: 'Start message'},
+  data: { people: [] },
 
   init: function () {
     JSONP({
       url: 'http://www.filltext.com/',
-      data: { rows: 10, name: '{firstName}' },
+      data: {
+        rows: 10,
+        fname: '{firstName}',
+        lname: '{lastName}',
+        tel: '{phone|format}',
+        address: 'streetAddress',
+        city: '{city}',
+        state: '{usState|abbr}',
+        zip: '{zip}'
+      },
       success: function(data) {
         console.log(JSON.stringify(data));
-        this.trigger({ message: data[0].name});
+        this.data.people = data;
+        this.trigger(this.data);
       }.bind(this)
     });
   },

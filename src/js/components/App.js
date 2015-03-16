@@ -7,10 +7,14 @@ var App = React.createClass({
   mixins: [Reflux.connect(Store)],
 
   render: function() {
+    var items = this.state.people.map(function (person, i) {
+      return <li key={i}>{person.fname}</li>;
+    });
+
     return (
-      <div>
-        {this.state.message}
-      </div>
+      <ul>
+        {items}
+      </ul>
     );
   }
 
