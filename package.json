@@ -1,0 +1,34 @@
+{
+  "name": "playground",
+  "version": "0.0.1",
+  "description": "playground",
+  "main": "build/main.js",
+  "scripts": {
+    "start": "gulp",
+    "prod": "gulp build",
+    "test": "gulp test",
+    "clean": "gulp clean"
+  },
+  "author": "AlexKVal",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.2.5",
+    "browserify": "^9.0.3",
+    "del": "^1.1.1",
+    "envify": "^3.3.1",
+    "gulp": "^3.8.11",
+    "gulp-notify": "^2.2.0",
+    "gulp-streamify": "0.0.5",
+    "gulp-uglify": "^1.1.0",
+    "gulp-util": "^3.0.4",
+    "reactify": "^1.1.0",
+    "uglifyify": "^3.0.1",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^2.4.0"
+  },
+  "dependencies": {
+    "react": "^0.13.0",
+    "reflux": "^0.2.7",
+    "superagent": "^1.1.0"
+  }
+}
