@@ -1,16 +1,4 @@
 var React = require('react');
-var Store = require('./stores/Store');
+var App = require('./components/App');
 
-var App = React.createClass({
-
-  render: function() {
-    return (
-      <div>
-        {this.props.message}
-      </div>
-    );
-  }
-
-});
-
-module.exports = App;
+React.render(<App />, document.getElementById('app'));
