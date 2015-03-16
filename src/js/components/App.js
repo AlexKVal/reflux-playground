@@ -1,6 +1,7 @@
 var React = require('react');
 var Reflux = require('reflux');
 var Store = require('../stores/Store');
+var Table = require('./Table');
 
 var App = React.createClass({
 
@@ -8,13 +9,13 @@ var App = React.createClass({
 
   render: function() {
     var items = this.state.people.map(function (person, i) {
-      return <li key={i}>{person.fname}</li>;
+      return <tr key={i}><td>{person.fname}</td></tr>;
     });
 
     return (
-      <ul>
-        {items}
-      </ul>
+      <div className="container-fluid">
+        <Table> {items} </Table>
+      </div>
     );
   }
 
